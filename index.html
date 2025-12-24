@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amazon Clone — HTML & CSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href=style.css> 
+</head>
+<body>
+  <header class="topnav">
+    <div class="container topbar">
+      <div class="logo">
+          <img src="logo.png" alt="Amazon Logo" class="logo" width="128.28" height="50">
+        <div>
+          <div style="font-size:18px"><i class="fa-solid fa-location-dot"></i></div>
+          <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
+                   Delivering to Ghaziabad 201002
+          </span><br>
+          <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
+                   Update location
+          </span>
+        </div>
+      </div>
+
+      <div class="search">
+        <input aria-label="Search" placeholder="Search for products, brands and more..." />
+        <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <div class="flag">
+         <img src="flag.png" alt="flag">
+         <span>EN</span>
+         <i class="fa-solid fa-sort-down"></i>
+      </div>
+    
+      <div class="controls">
+        <div class="control">
+          <div style="font-size:12px">Hello, Sign in</div>
+          <div style="font-weight:700">Accounts & Lists</div>
+        </div>
+        <div class="control">
+          <div style="font-size:12px">Returns</div>
+          <div style="font-weight:700">& Orders</div>
+        </div>
+        <div class="cart">
+          <div><i class="fa-solid fa-cart-shopping"></i></div>
+          <div style="font-weight:700">Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="subnav">
+      <div class="container">
+        <a href="#"><i class="fa-solid fa-bars"></i>All</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Sell</a>
+        <a href="#">Registry</a>
+        <a href="#">Prime</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <aside class="sidebar">
+          <h3 style="margin-top:0">Shop by Category</h3>
+          <ul class="cats">
+            <li>Electronics</li>
+            <li>Mobile Phones</li>
+            <li>Fashion</li>
+            <li>Home & Kitchen</li>
+            <li>Beauty</li>
+            <li>Toys & Games</li>
+          </ul>
+          <hr style="margin:12px 0" />
+          <div style="font-size:13px;color:var(--muted)">Personalized recommendations and deals for you.</div>
+        </aside>
+
+        <div>
+          <div class="banner">
+            <img src="https://picsum.photos/seed/amazonbanner/800/300" alt="banner" />
+            <div class="cta">
+              <h2>Upgrade your home — top deals on electronics</h2>
+              <p class="muted">Daily discounts • Fast delivery • Free returns</p>
+              <div style="display:flex;gap:10px;margin-top:6px">
+                <a class="cta-link" href="#">Shop deals</a>
+                <a class="cta-link" href="#">See more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="products" id="productGrid">
+            <!-- Product Card (repeat) -->
+            <div class="product">
+              <img src="https://picsum.photos/seed/p1/400/300" alt="product" />
+              <div class="title">Wireless Bluetooth Headphones — Noise Cancelling</div>
+              <div class="rating">★★★★★ <span class="muted">(1,234)</span></div>
+              <div class="price">₹2,499</div>
+              <div class="muted" style="font-size:13px">Free delivery by Dec 10</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p2/400/300" alt="product" />
+              <div class="title">Smartwatch with Fitness Tracker and Heart Rate Monitor</div>
+              <div class="rating">★★★★☆ <span class="muted">(8,912)</span></div>
+              <div class="price">₹3,999</div>
+              <div class="muted" style="font-size:13px">1-year warranty</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p3/400/300" alt="product" />
+              <div class="title">Portable Bluetooth Speaker — 12W, Waterproof</div>
+              <div class="rating">★★★★☆ <span class="muted">(4,201)</span></div>
+              <div class="price">₹1,299</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p4/400/300" alt="product" />
+              <div class="title">Laptop Backpack — Anti-theft, USB Charging Port</div>
+              <div class="rating">★★★★★ <span class="muted">(2,010)</span></div>
+              <div class="price">₹1,099</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p5/400/300" alt="product" />
+              <div class="title">4K Action Camera — Waterproof, 30fps</div>
+              <div class="rating">★★★★☆ <span class="muted">(3,100)</span></div>
+              <div class="price">₹4,750</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p6/400/300" alt="product" />
+              <div class="title">Electric Kettle — 1.7L, Auto Shut-off</div>
+              <div class="rating">★★★☆☆ <span class="muted">(980)</span></div>
+              <div class="price">₹899</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p7/400/300" alt="product" />
+              <div class="title">Men's Casual Shoes — Comfortable Walking Shoes</div>
+              <div class="rating">★★★★☆ <span class="muted">(1,504)</span></div>
+              <div class="price">₹1,299</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+            <div class="product">
+              <img src="https://picsum.photos/seed/p8/400/300" alt="product" />
+              <div class="title">Ceramic Non-stick Cookware Set — 5 pieces</div>
+              <div class="rating">★★★★★ <span class="muted">(760)</span></div>
+              <div class="price">₹2,199</div>
+              <div style="margin-top:auto"><button>Add to Cart</button></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+      <h4>Get to Know Us</h4>
+      <p>About Amazon</p>
+      <p>Careers</p>
+      <p>Press Releases</p>
+    </div>
+
+    <div>
+      <h4>Connect with Us</h4>
+      <p>Facebook</p>
+      <p>Twitter</p>
+      <p>Instagram</p>
+    </div>
+
+    <div>
+      <h4>Make Money with Us</h4>
+      <p>Sell on Amazon</p>
+      <p>Affiliate Program</p>
+    </div>
+
+    <div>
+      <h4>Let Us Help You</h4>
+      <p>Your Account</p>
+      <p>Returns Centre</p>
+      <p>Help</p>
+    </div>
+  </div>
+        <div style="text-align:right">
+          <div style="font-weight:700">Questions? <a href="#">Contact us</a></div>
+          <div class="muted" style="font-size:13px">© 2025 Amazon UI Clone | College Project</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
