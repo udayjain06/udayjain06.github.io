@@ -105,6 +105,84 @@
 
     /* Footer */
     footer{margin-top:24px;padding:22px 0;background:linear-gradient(180deg, #fff, #f7f7f7)}
+    footer {
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* Back to top */
+.footpanel1 {
+  background-color: #37475a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Main links section */
+.footpanel2 {
+  background-color: #232f3e;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+}
+
+.footpanel2 ul {
+  list-style: none;
+}
+
+.footpanel2 p {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footpanel2 a {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #dddddd;
+  cursor: pointer;
+}
+
+.footpanel2 a:hover {
+  text-decoration: underline;
+}
+
+/* Logo panel */
+.footpanel3 {
+  background-color: #232f3e;
+  border-top: 0.5px solid #3a4553;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-image: url("logo.png"); /* your amazon logo */
+  background-size: cover;
+  height: 50px;
+  width: 100px;
+}
+
+/* Bottom panel */
+.footpanel4 {
+  background-color: #131a22;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.pages {
+  padding-bottom: 5px;
+}
+
+.pages:hover {
+  text-decoration: underline;
+}
 
     /* Responsive */
     @media(max-width:1000px){
