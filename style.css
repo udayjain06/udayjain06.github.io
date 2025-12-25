@@ -103,11 +103,171 @@
     .product .rating{color:#f0a500;font-size:13px}
     .product button{background:var(--accent);border:none;padding:8px;border-radius:6px;cursor:pointer;font-weight:700}
 
-    /* Footer */
-    footer{margin-top:24px;padding:22px 0;background:linear-gradient(180deg, #fff, #f7f7f7)}
-    footer {
-  margin-top: 30px;
+/* ================= AMAZON FOOTER ================= */
+
+footer {
+  background-color: #232f3e;
+  color: #ddd;
   font-family: Arial, sans-serif;
+}
+
+/* Back to top */
+.footpanel1 {
+  background-color: #37475a;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Main footer links */
+.footpanel2 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footpanel2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footpanel2 p {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footpanel2 a {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.footpanel2 a:hover {
+  text-decoration: underline;
+}
+
+/* Logo row */
+.footpanel3 {
+  border-top: 1px solid #3a4553;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #232f3e;
+}
+
+.footpanel3 img {
+  width: 100px;
+}
+
+/* Amazon services section */
+.footpanel-services {
+  background-color: #131a22;
+  padding: 30px 0;
+}
+
+.services-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  font-size: 12px;
+}
+
+.services-grid div {
+  color: #999;
+}
+
+.service-title {
+  color: #ddd;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.services-grid span {
+  display: block;
+  line-height: 1.4;
+}
+
+.service-title:hover,
+.services-grid span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Bottom copyright */
+.footpanel4 {
+  background-color: #131a22;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+.pages {
+  margin-bottom: 8px;
+}
+
+/* ===== Footer Logo + Language Section ===== */
+
+.footer-lang {
+  background-color: #232f3e;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Amazon logo */
+.footer-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Language buttons container */
+.lang-controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* Common button style */
+.lang-btn {
+  background: transparent;
+  border: 1px solid #848688;
+  color: #ddd;
+  padding: 6px 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/* Flag image */
+.lang-btn img {
+  width: 18px;
+  height: auto;
+}
+
+/* Hover effect */
+.lang-btn:hover {
+  border-color: #fff;
+}
+
+/* Globe + caret icons */
+.lang-btn i {
+  font-size: 12px;
 }
 
 /* Back to top */
@@ -158,13 +318,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logo {
-  background-image: url("logo.png"); /* your amazon logo */
-  background-size: cover;
-  height: 50px;
-  width: 100px;
 }
 
 /* Bottom panel */
