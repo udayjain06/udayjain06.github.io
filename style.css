@@ -21,9 +21,9 @@ body {
 
 /* Container */
 .container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 16px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
 }
 
 /* Top navigation */
