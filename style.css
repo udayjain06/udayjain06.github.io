@@ -26,6 +26,64 @@ body {
   margin: auto;
 }
 
+.css-slider {
+  width: 100vw;                /* full screen width */
+  margin-left: calc(-50vw + 50%); /* removes container side spacing */
+  background: #fff;
+}
+/* ===== HERO BACKGROUND ===== */
+.hero-bg {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background: #f5d76e; /* Amazon yellow fallback */
+}
+
+.hero-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== CARDS LAYER ===== */
+.cards-wrapper {
+  margin-top: -100px;   /* 🔥 pulls cards over banner */
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== GRID ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* ===== CARD STYLE ===== */
+.card {
+  background: #fff;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 12px;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* Top navigation */
 header.topnav {
   background: var(--nav-bg);
