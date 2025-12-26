@@ -74,7 +74,7 @@ header.topnav {
   cursor: pointer;
   font-weight: 600;
 }
-
+/* nav bar flag */
 /* flag */
 .flag {
   display: flex;
@@ -148,7 +148,7 @@ nav.subnav .container {
   display: flex;
   gap: 16px;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
 }
 nav.subnav a {
   color: #fff;
