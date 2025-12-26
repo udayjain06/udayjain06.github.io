@@ -398,6 +398,17 @@ footer {
 }
 
 /* Common button style */
+.lang-controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* wrapper */
+.lang-wrapper {
+  position: relative;
+}
+
+/* button */
 .lang-btn {
   background: transparent;
   border: 1px solid #848688;
@@ -409,13 +420,75 @@ footer {
   gap: 6px;
   cursor: pointer;
   border-radius: 3px;
-  white-space: nowrap;
+}
+
+/* dropdown */
+.lang-dropdown label {
+  display: block;
+  font-size: 13px;
+  padding: 6px 4px;
+  cursor: pointer;
+}
+
+.lang-dropdown label:hover {
+  background: #f3f3f3;
+}
+
+/* radio spacing */
+.lang-dropdown input {
+  margin-right: 6px;
+}
+
+/* SHOW dropdown */
+.lang-wrapper:focus-within .lang-dropdown {
+  display: block;
 }
 
 /* Flag image */
 .lang-btn img {
   width: 18px;
   height: auto;
+}
+
+/* wrapper for dropdown */
+.lang-wrapper {
+  position: relative;
+}
+
+/* dropdown box */
+.lang-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  color: #111;
+  padding: 10px;
+  width: 190px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: none;
+  z-index: 1000;
+}
+
+/* dropdown items */
+.lang-dropdown label {
+  display: block;
+  font-size: 13px;
+  padding: 6px 4px;
+  cursor: pointer;
+}
+
+.lang-dropdown label:hover {
+  background: #f3f3f3;
+}
+
+.lang-dropdown input {
+  margin-right: 6px;
+}
+
+/* show on click (CSS only) */
+.lang-wrapper:focus-within .lang-dropdown {
+  display: block;
 }
 
 /* Hover effect */

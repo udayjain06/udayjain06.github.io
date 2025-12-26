@@ -241,7 +241,7 @@
       <div class="footpanel1">Back to Top</div>
 
       <!-- Main footer links -->
-      <div class="footpanel2">
+      <div class="footpanel2" style="padding: 0px">
         <ul>
           <p>Get to Know Us</p>
           <a>About Amazon</a>
@@ -280,25 +280,56 @@
         </ul>
       </div>
 
-      <!-- Logo panel -->
-      <div class="footpanel3">
-        <div class="logo"></div>
-      </div>
+      <!-- hr panel -->
+      <hr style="border: none; background-color: #3a4553; height: 1px" />
       <!-- Language & Country Panel -->
       <div class="footer-lang">
         <img src="logo.png" alt="Amazon" class="footer-logo" />
-
         <div class="lang-controls">
+          <div class="lang-wrapper">
+            <button class="lang-btn">
+              <i class="fa-solid fa-globe"></i>
+              English
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <div class="lang-dropdown">
+              <label
+                ><input type="radio" name="lang" checked /> English - EN</label
+              >
+              <label><input type="radio" name="lang" /> español - ES</label>
+              <label><input type="radio" name="lang" /> العربية - AR</label>
+              <label><input type="radio" name="lang" /> Deutsch - DE</label>
+              <label><input type="radio" name="lang" /> हिन्दी - HI</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="lang-wrapper">
           <button class="lang-btn">
-            <i class="fa-solid fa-globe"></i>
-            English
+            <img src="flag.png" alt="India" style="width: 18px" />
+            India
             <i class="fa-solid fa-caret-down"></i>
           </button>
 
-          <button class="lang-btn">
-            <img src="flag.png" alt="India" />
-            India
-          </button>
+          <div class="lang-dropdown">
+            <label>
+              <input type="radio" name="country" checked />
+              🇮🇳 India
+            </label>
+            <label>
+              <input type="radio" name="country" />
+              🇺🇸 United States
+            </label>
+            <label>
+              <input type="radio" name="country" />
+              🇬🇧 United Kingdom
+            </label>
+            <label>
+              <input type="radio" name="country" />
+              🇦🇪 United Arab Emirates
+            </label>
+          </div>
         </div>
       </div>
 
