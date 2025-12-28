@@ -610,17 +610,7 @@ footer {
   border-radius: 3px;
 }
 
-/* dropdown */
-.lang-dropdown label {
-  display: block;
-  font-size: 13px;
-  padding: 6px 4px;
-  cursor: pointer;
-}
 
-.lang-dropdown label:hover {
-  background: #f3f3f3;
-}
 
 /* radio spacing */
 .lang-dropdown input {
