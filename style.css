@@ -54,14 +54,21 @@ body {
 }
 
 /* ===== GRID ===== */
+
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 10px;
-  /* position: relative;
-  top: -250px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 /* Hover effect for cards */
  @media (hover: hover) {
   .card {
