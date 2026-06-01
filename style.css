@@ -59,6 +59,8 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-top: 10px;
+  /* position: relative;
+  top: -250px; */
 }
 /* Hover effect for cards */
  @media (hover: hover) {
