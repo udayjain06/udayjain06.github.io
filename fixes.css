@@ -1,0 +1,297 @@
+/* =====================================================
+   fixes.css  — paste this at the BOTTOM of your style.css
+   OR add <link rel="stylesheet" href="fixes.css"> 
+   after your existing <link rel="stylesheet" href="style.css">
+   ===================================================== */
+
+/* ─────────────────────────────────────────────────────
+   FIX 1: Hero banner too tall / cards overlapping badly
+   ───────────────────────────────────────────────────── */
+
+/* Limit hero image height so it doesn't dominate the page */
+.hero-bg {
+  max-height: 340px;          /* was uncapped — now contained */
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center top; /* keep the bus visible */
+  display: block;
+}
+
+/* Pull cards up — tighter overlap looks cleaner */
+.cards-wrapper {
+  margin-top: -80px;          /* was -100px; adjust to taste: -60 to -90 */
+  padding: 0 16px;
+}
+
+/* ─────────────────────────────────────────────────────
+   FIX 2: Cards grid — conflicting CSS cleaned up
+   The original has display:grid AND display:flex in
+   the same rule — flex wins and breaks the 4-col grid.
+   ───────────────────────────────────────────────────── */
+
+.cards-grid {
+  /* Remove the old conflicting declarations */
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  overflow: visible !important;    /* was overflow:scroll then auto */
+  flex-wrap: unset !important;     /* reset any leftover flex */
+}
+
+/* Each card: equal height so they line up */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;               /* 👆 nice pointer on cards */
+}
+
+/* Pointer on all interactive card children */
+.card a,
+.card .see-more,
+.box-grid .grid-item,
+.intelligence,
+.cat-card,
+.promo-card,
+.product {
+  cursor: pointer;
+}
+
+/* Grid items inside cards — uniform height images */
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  flex: 1;                        /* fills card height evenly */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #f7f7f7;
+  display: block;
+}
+
+/* ─────────────────────────────────────────────────────
+   FIX 3: Search — hide product area, show inline results
+   (JS handles the logic; CSS controls the search input
+   suggestion dropdown styling added by script)
+   ───────────────────────────────────────────────────── */
+
+/* The search suggestion dropdown injected by JS */
+#js-suggest-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  z-index: 500;
+  max-height: 320px;
+  overflow-y: auto;
+  display: none;
+}
+
+#js-suggest-box.open {
+  display: block;
+}
+
+.suggest-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background .15s;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.suggest-item:last-child {
+  border-bottom: none;
+}
+
+.suggest-item:hover {
+  background: #f3f3f3;
+}
+
+.suggest-item img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.suggest-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.suggest-item-title {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggest-item-price {
+  font-size: 12px;
+  color: #b12704;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.suggest-item-add {
+  background: #ff9900;
+  border: none;
+  border-radius: 14px;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  flex-shrink: 0;
+  transition: background .15s;
+}
+
+.suggest-item-add:hover {
+  background: #e68900;
+}
+
+.suggest-no-results {
+  padding: 16px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+/* Make .search wrapper position:relative so dropdown sits under it */
+.search {
+  position: relative;
+}
+
+/* ─────────────────────────────────────────────────────
+   FIX 4: India / Language dropdown — white border issue
+   on mobile caused by missing overflow control
+   ───────────────────────────────────────────────────── */
+
+/* The wrapper needs to contain overflow */
+.lang-wrapper {
+  position: relative;
+  overflow: visible;   /* allow dropdown to escape */
+}
+
+/* Fix dropdown bleeding outside on mobile */
+.lang-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  color: #111;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.25);
+  border: 1px solid #ddd;       /* was causing white outline — now defined */
+  display: none;
+  z-index: 1000;
+  overflow: hidden;              /* clips internal content neatly */
+}
+
+.lang-dropdown label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 7px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background .12s;
+}
+
+.lang-dropdown label:hover {
+  background: #f3f3f3;
+}
+
+/* Show on focus-within (CSS only, no JS needed) */
+.lang-wrapper:focus-within .lang-dropdown {
+  display: block;
+}
+
+/* Mobile: flip dropdown upward if near bottom of screen */
+@media (max-width: 768px) {
+  .lang-dropdown {
+    left: auto;
+    right: 0;           /* align to right edge on small screens */
+    width: 190px;
+  }
+
+  /* Footer lang row — stack on very small screens */
+  .footer-lang {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 18px 16px;
+    justify-content: center;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   RESPONSIVE FIXES (cards + grid)
+   ───────────────────────────────────────────────────── */
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hero-bg {
+    max-height: 260px;
+  }
+
+  .hero-bg img {
+    height: 260px;
+  }
+
+  .cards-wrapper {
+    margin-top: -60px;
+  }
+}
+
+/* Phone: 1 column */
+@media (max-width: 560px) {
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-bg {
+    max-height: 200px;
+  }
+
+  .hero-bg img {
+    height: 200px;
+  }
+
+  .cards-wrapper {
+    margin-top: -40px;
+    padding: 0 10px;
+  }
+
+  .card {
+    min-width: unset;
+  }
+}
